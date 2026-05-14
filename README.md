@@ -1,0 +1,1 @@
+A fully automated, end-to-end multi-agent AI system for booking doctor appointments. Using agentic AI, each agent handles a specific part of the process — from understanding the user's request to finding available doctors and scheduling the appointment. This showcases the power of AI agents working together to complete complex tasks without human intervention.
