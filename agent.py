@@ -1,4 +1,4 @@
-from typing import Lieral, List, Any
+from typing import Literal, List, Any
 from langchain_core.tools import tool
 from langgraph.types import Command
 from langgraph.graph.message import add_messages
@@ -31,7 +31,7 @@ class DoctorAppointmentAgent:
         self.llm_model = llm_model.get_model()
 
     
-    def supervisor_node(self, state: AgentState) -> Command[Literal['information_noe', 'nooking_node', '__end__']]:
+    def supervisor_node(self, state: AgentState) -> Command[Literal['information_node', 'booking_node', '__end__']]:
         print("**************************below is my state right after entering****************************")
         print(state)
 
@@ -81,7 +81,7 @@ class DoctorAppointmentAgent:
                     )
     
 
-    def information_node(self, state: AgentState) -> Command[Literal['supervisior']]:
+    def information_node(self, state: AgentState) -> Command[Literal['supervisor']]:
         print("*****************called information node************")
 
         system_prompt = "You are specialized agent to provide information related to availability of doctors or any FAQs related to hospital based on the query. You have access to the tool.\n Make sure to ask user politely if you need any further information to execute the tool.\n For your information, Always consider current year is 2024."
